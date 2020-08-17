@@ -1,0 +1,34 @@
+import  time
+
+def func1():
+    try:
+        file = open('diary.txt','a',encoding='utf-8')
+        time_str = time.ctime #返回字符串时间
+        func_name = 'func1'
+        content = time_str + '\t' + func_name + '\n'
+        file.write(content)
+    except Exception as e:
+        print(e)
+    finally:
+        file.close()
+    print("Function 1")
+
+
+def func2():
+    try:
+        file = open('diary.txt','a',encoding='utf-8')
+        time_str = time.ctime #查找网页python文档，返回字符串时间
+        func_name = 'func1'
+        content = time_str + '\t' + func_name+'\n'
+        file.write(content)
+    except Exception as e:
+        print(e)
+    finally:
+        file.close()
+    print("Function 2")
+
+func1()
+func2()
+
+
+
