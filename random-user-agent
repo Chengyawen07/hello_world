@@ -30,5 +30,6 @@ def load_baidu():
     response = urllib.request.urlopen(request)
     #请求头的信息
     print(request.get_header("User-agent"))
+    #注：User-agent只有agent小写时，才被识别，和上一步add里“User-Agent”没有关系
 
 load_baidu()
